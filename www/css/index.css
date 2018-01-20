@@ -83,29 +83,46 @@ input {
 .show-on-offline {
   display: none; }
 
+h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px; }
+  h3:before {
+    content: '#';
+    font-weight: 600; }
+
 .theme-1 .top-bar, .theme-1 .tab-bar {
   background: black;
   color: white; }
+.theme-1 h3 {
+  color: black; }
 .theme-1 .tab.active {
   border-bottom-color: white; }
 
 .theme-2 .top-bar, .theme-2 .tab-bar {
   background: purple;
   color: white; }
+.theme-2 h3 {
+  color: purple; }
 .theme-2 .tab.active {
   border-bottom-color: white; }
 
 .theme-3 .top-bar, .theme-3 .tab-bar {
   background: darkgoldenrod;
   color: white; }
+.theme-3 h3 {
+  color: darkgoldenrod; }
 .theme-3 .tab.active {
   border-bottom-color: white; }
 
 .theme-offline .top-bar, .theme-offline .tab-bar {
-  background: #bf0d0d !important;
+  background: #bf0d0d;
   color: white; }
+.theme-offline h3 {
+  color: #bf0d0d; }
 .theme-offline .tab.active {
   border-bottom-color: white; }
+
 .theme-offline .show-on-offline {
   display: inline-block; }
 

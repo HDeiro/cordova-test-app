@@ -1,0 +1,28 @@
+$themes: 'theme-1', 'theme-2', 'theme-3', 'theme-offline';
+$theme-colors: black, purple, darkgoldenrod, rgb(191, 13, 13);
+
+@each $theme in $themes {
+    $index: index($themes, $theme);
+    $color: nth($theme-colors, $index);
+
+    .#{$theme} {
+        .top-bar, .tab-bar {
+            background: $color;
+            color: white;
+        }
+
+        h3 {
+            color: $color;
+        }
+        
+        .tab.active {
+            border-bottom-color: white;
+        }
+    }
+}
+
+.theme-offline {
+    .show-on-offline {
+        display: inline-block;
+    }
+}
