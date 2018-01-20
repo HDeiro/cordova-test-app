@@ -10,5 +10,7 @@ bin/*
 plugins/*
 platforms/*
 node_modules/*
+sass/.sass-cache
+
 
 # End of https://www.gitignore.io/api/apachecordova
