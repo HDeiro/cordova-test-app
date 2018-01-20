@@ -6,23 +6,62 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello Cordova</title>
+        <title>Cordova Test App</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body class="theme-1">
         <div class="top-bar">
-            lalalala
+            Cordova Test App
+            <small class="show-on-offline">(Offline)</small>
         </div>
 
         <div class="app-body">
-            XXXX
+            <!-- General -->
+            <p>
+                The Cordova Framework supports almost all the HTML, 
+                JavaScript and CSS features.
+                You can build a lot of stuff using Cordova.
+            </p>
+
+            <hr>
+
+            <!-- Cache -->
+            <h3>Data Storage</h3>
+
+            <p>
+                For <b>local storage</b> you have a few options like browser caching
+                throught LocalStorage, SessionStorage or some database application (in that
+                case you will need to install a plugin).
+            </p>
+
+            <p>
+                Bellow, you have an example where you can write something and that "something"
+                will be persisted on device localstorage.
+            </p>
+
+            <input type="text" placeholder="Write Something, close the app and go back :)" id="cachable">
+
+            <hr>
+            
+            <!-- Nerwork info -->
+            <h3>Nerwork State</h3>
+
+            <p>
+                You can use the <code>cordova plugin add cordova-plugin-network-information</code> 
+                to install a plugin that allows you to check internet connection state. Through this
+                feedback, the developer defines how to operate in disconected environments.
+            </p>
+
+            <p>
+                <b>Current Network State:</b> <span id="networkInfo">Undetected network state</span>
+            </p>
         </div>
 
         <div class="tab-bar">
-            <div class="tab" data-theme="theme-1">Tema 1</div>
+            <div class="tab active" data-theme="theme-1">Tema 1</div>
             <div class="tab" data-theme="theme-2">Tema 2</div>
             <div class="tab" data-theme="theme-3">Tema 3</div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

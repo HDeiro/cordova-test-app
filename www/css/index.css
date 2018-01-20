@@ -35,6 +35,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+*, * * {
+  box-sizing: border-box; }
+
 body {
   background: whitesmoke;
   position: relative; }
@@ -58,11 +61,27 @@ body {
   justify-content: space-around; }
 
 .app-body {
-  padding: 56px 10px; }
+  padding: 66px 10px; }
 
 .tab {
   width: 100%;
-  border-bottom: 8px solid transparent; }
+  border-bottom: 8px solid transparent;
+  transition: border-bottom-color 300ms ease-out; }
+
+p {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin-bottom: 16px; }
+
+input {
+  width: 100%;
+  height: 46px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-bottom: 16px; }
+
+.show-on-offline {
+  display: none; }
 
 .theme-1 .top-bar, .theme-1 .tab-bar {
   background: black;
@@ -81,5 +100,13 @@ body {
   color: white; }
 .theme-3 .tab.active {
   border-bottom-color: white; }
+
+.theme-offline .top-bar, .theme-offline .tab-bar {
+  background: #bf0d0d !important;
+  color: white; }
+.theme-offline .tab.active {
+  border-bottom-color: white; }
+.theme-offline .show-on-offline {
+  display: inline-block; }
 
 /*# sourceMappingURL=index.css.map */

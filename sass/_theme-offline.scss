@@ -1,0 +1,14 @@
+.theme-offline {    
+    .top-bar, .tab-bar {
+        background: rgb(191, 13, 13) !important;
+        color: white;
+    }
+    
+    .tab.active {
+        border-bottom-color: white;
+    }
+
+    .show-on-offline {
+        display: inline-block;
+    }
+}

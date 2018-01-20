@@ -1,3 +1,7 @@
+*, * * {
+    box-sizing: border-box;
+}
+
 body {
     background: whitesmoke;
     position: relative;
@@ -25,10 +29,29 @@ body {
 }
 
 .app-body {
-    padding: $bar-height 10px;
+    padding: $bar-height+10px 10px;
 }
 
 .tab {
     width: 100%;
     border-bottom: 8px solid transparent;
+    transition: border-bottom-color 300ms ease-out;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.2em;
+    margin-bottom: 16px;
+}
+
+input {
+    width: 100%;
+    height: $input-height;
+    padding: 0 10px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.show-on-offline {
+    display: none;
 }
