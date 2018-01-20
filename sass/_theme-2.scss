@@ -1,0 +1,10 @@
+.theme-2 {
+    .top-bar, .tab-bar {
+        background: purple;
+        color: white;
+    }
+    
+    .tab.active {
+        border-bottom-color: white;
+    }
+}

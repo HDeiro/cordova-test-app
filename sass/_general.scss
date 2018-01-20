@@ -1,0 +1,34 @@
+body {
+    background: whitesmoke;
+    position: relative;
+}
+
+.top-bar, .tab-bar {
+    position: fixed;
+    width: 100vw;
+    height: $bar-height;
+    line-height: $bar-height;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 300ms ease-out;
+}
+
+.top-bar {
+    top: 0;
+}
+
+.tab-bar {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.app-body {
+    padding: $bar-height 10px;
+}
+
+.tab {
+    width: 100%;
+    border-bottom: 8px solid transparent;
+}

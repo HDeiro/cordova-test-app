@@ -1,0 +1,10 @@
+.theme-3 {    
+    .top-bar, .tab-bar {
+        background: darkgoldenrod;
+        color: white;
+    }
+    
+    .tab.active {
+        border-bottom-color: white;
+    }
+}
