@@ -97,6 +97,9 @@ h3 {
     content: '#';
     font-weight: 600; }
 
+.facebook-logged .show-on-facebook-logged {
+  display: block !important; }
+
 .theme-1 .top-bar, .theme-1 .tab-bar, .theme-1 button {
   background: black;
   color: white; }

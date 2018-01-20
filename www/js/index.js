@@ -78,7 +78,6 @@ window.onload = () => {
     // AJAX
     //####################################################
     const ajaxButton = $('#ajaxButton');
-
     ajaxButton.addEventListener('click', event => {
         var xhttp = new XMLHttpRequest();
         xhttp.overrideMimeType("application/json");
@@ -92,5 +91,39 @@ window.onload = () => {
             }
         }
         xhttp.send();
+    });
+
+    //####################################################
+    // SOCIAL INTEGRATION (FACEBOOK)
+    //####################################################
+
+    const facebookButton = $('#fb');
+    facebookButton.addEventListener('click', event => {
+        facebookConnectPlugin.login(
+            ['email', 'public_profile'], 
+            success => {
+                facebookConnectPlugin.api(
+                    `/me?fields=email,name&access_token=${success.authResponse.accessToken}`, 
+                    null, 
+                    success => {
+                        $('#fbResponse').innerHTML = `${JSON.stringify(success)}<img src="http://graph.facebook.com/${success.id}/picture?type=large" style="width:100%;">`;
+                        body.classList.add('facebook-logged');
+                    },
+                    error => console.log(error)
+                );
+            },
+            error => console.log(error)
+        );
+    });
+
+    const facebookLogoutButton = $('#fblogout');
+    facebookLogoutButton.addEventListener('click', event => {
+        facebookConnectPlugin.logout(success => {
+            console.log(success);
+            body.classList.remove('facebook-logged');
+            $('#fbResponse').innerHTML = ``;
+        }, error => {
+            console.log(error);
+        });
     })
 };
