@@ -96,7 +96,6 @@ window.onload = () => {
     //####################################################
     // SOCIAL INTEGRATION (FACEBOOK)
     //####################################################
-
     const facebookButton = $('#fb');
     facebookButton.addEventListener('click', event => {
         facebookConnectPlugin.login(
@@ -125,5 +124,19 @@ window.onload = () => {
         }, error => {
             console.log(error);
         });
-    })
+    });
+
+    //####################################################
+    // SENSORS
+    //####################################################
+    setInterval(() => {
+        navigator.accelerometer.getCurrentAcceleration(
+            success => {
+                $('#xval').innerText = success.x;
+                $('#yval').innerText = success.y;
+                $('#zval').innerText = success.z;
+            }, 
+            error => console.log(error)
+        );
+    }, 300);
 };

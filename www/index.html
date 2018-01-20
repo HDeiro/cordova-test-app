@@ -69,14 +69,14 @@
                     You can have RESTFull communication through Ajax Request. But, it only work if you have internet connection.
                 </p>
 
-                <button id="ajaxButton">Click me :)</button>
+                <button id="ajaxButton">Click me to request something :)</button>
 
                 <p class="bordered" id="jsonResponse"></p>
 
                 <hr/>
             </section>
             <!-- Conecting with social networks -->
-            <section class="ajax">
+            <section class="facebook">
                 <h3>Conecting to Social Networks</h3>
 
                 <p>
@@ -89,6 +89,30 @@
 
                 <button id="fblogout" class="show-on-facebook-logged" style="display: none">Click me to do Logout on Facebook :)</button>
             </section>
+            <!-- Sensors info -->
+            <section class="sensors">
+                <h3>Sensors Info</h3>
+
+                <p>
+                    You can also check some sensor info, as the accelerometer info.
+                </p>
+
+                <table>
+                    <tr>
+                        <td>X</td>
+                        <td id="xval">0</td>
+                    </tr>
+                    <tr>
+                        <td>Y</td>
+                        <td id="yval">0</td>
+                    </tr>
+                    <tr>
+                        <td>Z</td>
+                        <td id="zval">0</td>
+                    </tr>
+                </table>
+            </section>
+            
         </div>
 
         <div class="tab-bar">
