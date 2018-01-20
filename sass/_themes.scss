@@ -6,7 +6,7 @@ $theme-colors: black, purple, darkgoldenrod, rgb(191, 13, 13);
     $color: nth($theme-colors, $index);
 
     .#{$theme} {
-        .top-bar, .tab-bar {
+        .top-bar, .tab-bar, button {
             background: $color;
             color: white;
         }

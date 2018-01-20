@@ -73,4 +73,24 @@ window.onload = () => {
         checkConnection();
         body.classList.remove('theme-offline');
     }, false);
+
+    //####################################################
+    // AJAX
+    //####################################################
+    const ajaxButton = $('#ajaxButton');
+
+    ajaxButton.addEventListener('click', event => {
+        var xhttp = new XMLHttpRequest();
+        xhttp.overrideMimeType("application/json");
+        xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState == 4 && xhttp.status == "200") {
+                $('#jsonResponse').innerText = xhttp.responseText;
+            } else {
+                $('#jsonResponse').innerText = 'Something went wrong :(';
+            }
+        }
+        xhttp.send();
+    })
 };

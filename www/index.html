@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://jsonplaceholder.typicode.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -18,44 +18,62 @@
 
         <div class="app-body">
             <!-- General -->
-            <p>
-                The Cordova Framework supports almost all the HTML, 
-                JavaScript and CSS features.
-                You can build a lot of stuff using Cordova.
-            </p>
+            <section class="general">
+                <p>
+                    The Cordova Framework supports almost all the HTML, 
+                    JavaScript and CSS features.
+                    You can build a lot of stuff using Cordova.
+                </p>
 
-            <hr>
-
+                <hr />
+            </section>
             <!-- Cache -->
-            <h3>Data Storage</h3>
+            <section class="cache">
+                <h3>Data Storage</h3>
 
-            <p>
-                For <b>local storage</b> you have a few options like browser caching
-                throught LocalStorage, SessionStorage or some database application (in that
-                case you will need to install a plugin).
-            </p>
+                <p>
+                    For <b>local storage</b> you have a few options like browser caching
+                    throught LocalStorage, SessionStorage or some database application (in that
+                    case you will need to install a plugin).
+                </p>
 
-            <p>
-                Bellow, you have an example where you can write something and that "something"
-                will be persisted on device localstorage.
-            </p>
+                <p>
+                    Bellow, you have an example where you can write something and that "something"
+                    will be persisted on device localstorage.
+                </p>
 
-            <input type="text" placeholder="Write Something, close the app and go back :)" id="cachable">
+                <input type="text" placeholder="Write Something, close the app and go back :)" id="cachable">
 
-            <hr>
-            
+                <hr />
+            </section>
             <!-- Nerwork info -->
-            <h3>Nerwork State</h3>
+            <section class="network">
+                <h3>Nerwork State</h3>
 
-            <p>
-                You can use the <code>cordova plugin add cordova-plugin-network-information</code> 
-                to install a plugin that allows you to check internet connection state. Through this
-                feedback, the developer defines how to operate in disconected environments.
-            </p>
+                <p>
+                    You can use the <code>cordova plugin add cordova-plugin-network-information</code> 
+                    to install a plugin that allows you to check internet connection state. Through this
+                    feedback, the developer defines how to operate in disconected environments.
+                </p>
 
-            <p>
-                <b>Current Network State:</b> <span id="networkInfo">Undetected network state</span>
-            </p>
+                <p>
+                    <b>Current Network State:</b> <span id="networkInfo">Undetected network state</span>
+                </p>
+
+                <hr />
+            </section>
+            <!-- Ajax -->
+            <section class="ajax">
+                <h3>RESTfull Communication</h3>
+
+                <p>
+                    You can have RESTFull communication through Ajax Request. But, it only work if you have internet connection.
+                </p>
+
+                <button id="ajaxButton">Click me :)</button>
+
+                <p class="bordered" id="jsonResponse"></p>
+            </section>
         </div>
 
         <div class="tab-bar">

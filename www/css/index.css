@@ -73,17 +73,23 @@ p {
   line-height: 1.2em;
   margin-bottom: 16px; }
 
-input {
+input, button {
   width: 100%;
   height: 46px;
   padding: 0 10px;
   font-size: 16px;
   margin-bottom: 16px; }
 
+button {
+  transition: background 300ms ease-out;
+  border: none;
+  border-radius: 4px; }
+
 .show-on-offline {
   display: none; }
 
 h3 {
+  transition: color 300ms ease-out;
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 16px; }
@@ -91,7 +97,7 @@ h3 {
     content: '#';
     font-weight: 600; }
 
-.theme-1 .top-bar, .theme-1 .tab-bar {
+.theme-1 .top-bar, .theme-1 .tab-bar, .theme-1 button {
   background: black;
   color: white; }
 .theme-1 h3 {
@@ -99,7 +105,7 @@ h3 {
 .theme-1 .tab.active {
   border-bottom-color: white; }
 
-.theme-2 .top-bar, .theme-2 .tab-bar {
+.theme-2 .top-bar, .theme-2 .tab-bar, .theme-2 button {
   background: purple;
   color: white; }
 .theme-2 h3 {
@@ -107,7 +113,7 @@ h3 {
 .theme-2 .tab.active {
   border-bottom-color: white; }
 
-.theme-3 .top-bar, .theme-3 .tab-bar {
+.theme-3 .top-bar, .theme-3 .tab-bar, .theme-3 button {
   background: darkgoldenrod;
   color: white; }
 .theme-3 h3 {
@@ -115,7 +121,7 @@ h3 {
 .theme-3 .tab.active {
   border-bottom-color: white; }
 
-.theme-offline .top-bar, .theme-offline .tab-bar {
+.theme-offline .top-bar, .theme-offline .tab-bar, .theme-offline button {
   background: #bf0d0d;
   color: white; }
 .theme-offline h3 {
