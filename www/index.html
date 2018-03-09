@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://jsonplaceholder.typicode.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -25,7 +24,7 @@
                     You can build a lot of stuff using Cordova.
                 </p>
 
-                <hr />
+                <hr/>
             </section>
             <!-- Cache -->
             <section class="cache">
@@ -44,7 +43,7 @@
 
                 <input type="text" placeholder="Write Something, close the app and go back :)" id="cachable">
 
-                <hr />
+                <hr/>
             </section>
             <!-- Nerwork info -->
             <section class="network">
@@ -60,7 +59,7 @@
                     <b>Current Network State:</b> <span id="networkInfo">Undetected network state</span>
                 </p>
 
-                <hr />
+                <hr/>
             </section>
             <!-- Ajax -->
             <section class="ajax">
@@ -70,10 +69,53 @@
                     You can have RESTFull communication through Ajax Request. But, it only work if you have internet connection.
                 </p>
 
-                <button id="ajaxButton">Click me :)</button>
+                <button id="ajaxButton">Click me to request something :)</button>
 
                 <p class="bordered" id="jsonResponse"></p>
+
+                <hr/>
             </section>
+            <!-- Conecting with social networks -->
+            <section class="facebook">
+                <h3>Conecting to Social Networks</h3>
+
+                <p>
+                    You can install a sort of plugins to connect with your preferred social networks, as Facebook, GooglePlus, Github.
+                </p>
+
+                <button id="fb">Click me to do Login on Facebook :)</button>
+
+                <p class="bordered" id="fbResponse"></p>
+
+                <button id="fblogout" class="show-on-facebook-logged" style="display: none">Click me to do Logout on Facebook :)</button>
+                <button id="fbshare" class="show-on-facebook-logged" style="display: none">Click me to Share a thing on Facebook :)</button>
+
+                <hr />
+            </section>
+            <!-- Sensors info -->
+            <section class="sensors">
+                <h3>Sensors Info</h3>
+
+                <p>
+                    You can also check some sensor info, as the accelerometer info.
+                </p>
+
+                <table>
+                    <tr>
+                        <td>X</td>
+                        <td id="xval">0</td>
+                    </tr>
+                    <tr>
+                        <td>Y</td>
+                        <td id="yval">0</td>
+                    </tr>
+                    <tr>
+                        <td>Z</td>
+                        <td id="zval">0</td>
+                    </tr>
+                </table>
+            </section>
+            
         </div>
 
         <div class="tab-bar">

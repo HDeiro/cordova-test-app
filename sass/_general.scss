@@ -73,3 +73,22 @@ h3 {
         font-weight: 600;
     }
 }
+
+.facebook-logged {
+    .show-on-facebook-logged {
+        display: block !important;
+    }
+}
+
+table {
+    width: 100%;
+
+    tr td:first-child {
+        width: 40px;
+    }
+
+    tr td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+}
