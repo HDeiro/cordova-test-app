@@ -1,0 +1,5 @@
+# Set the password and put it on platform/android
+key.store=../../android.keystore
+key.store.password=
+key.alias.password=
+key.alias=android

@@ -10,7 +10,8 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
-        "cordova-android": "^6.2.3",
+        "cordova-android": "^8.0.0",
+        "cordova-android-support-gradle-release": "3.0.1",
         "cordova-browser": "^4.1.0",
         "cordova-plugin-device-motion": "^1.2.5",
         "cordova-plugin-facebook4": "^1.9.1",
@@ -25,11 +26,14 @@
                 "APP_ID": "381485745650996",
                 "APP_NAME": "Cordova Test Application"
             },
-            "cordova-plugin-device-motion": {}
+            "cordova-plugin-device-motion": {},
+            "cordova-android-support-gradle-release": {
+                "ANDROID_SUPPORT_VERSION": "27.+"
+            }
         },
         "platforms": [
-            "android",
-            "browser"
+            "browser",
+            "android"
         ]
     }
 }

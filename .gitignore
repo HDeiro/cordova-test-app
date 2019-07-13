@@ -12,6 +12,8 @@ platforms/*
 node_modules/*
 sass/.sass-cache
 .sass-cache
+package-lock.json
+prepare/*
 
 
 # End of https://www.gitignore.io/api/apachecordova
